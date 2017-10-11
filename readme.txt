@@ -3,3 +3,4 @@ TODO:
 2) Add 2nd human player
   - including the option to choose between human and cpu 2nd player
 3) Make improvments as needed
+4) Add time/score display and limit
