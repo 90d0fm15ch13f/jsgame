@@ -14,7 +14,7 @@ var ball = new Ball(200, 300);
 var keysDown = {};
 
 var render = function () {
-    context.fillStyle = "#FF00FF";
+    context.fillStyle = "#FFFFFF";
     context.fillRect(0, 0, width, height);
     player.render();
     computer.render();
@@ -43,7 +43,7 @@ function Paddle(x, y, width, height) {
 }
 
 Paddle.prototype.render = function () {
-    context.fillStyle = "#0000FF";
+    context.fillStyle = "#000000";
     context.fillRect(this.x, this.y, this.width, this.height);
 };
 
