@@ -161,6 +161,7 @@ Ball.prototype.update = function (paddle1, paddle2) {
 window.onload = function() {
   document.body.appendChild(canvas);
   animate(step);
+	update_scores();
 };
 
 window.addEventListener("keydown", function (event) {
