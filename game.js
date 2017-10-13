@@ -100,6 +100,10 @@ Player.prototype.update = function () {
             this.paddle.move(-4, 0);
         } else if (value == 39) {
             this.paddle.move(4, 0);
+				} else if (value == 40) {
+				    this.paddle.move(0,-4);
+				} else if (value == 38) {
+				    this.paddle.move(0,4);
         } else {
             this.paddle.move(0, 0);
         }
