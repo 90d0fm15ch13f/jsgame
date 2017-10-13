@@ -173,6 +173,7 @@ Paddle.prototype.move = function (x, y) {
 window.onload = function() {
   document.body.appendChild(canvas);
   animate(step);
+	update_scores();
 };
 
 window.addEventListener("keydown", function (event) {

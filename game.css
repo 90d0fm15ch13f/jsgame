@@ -1,0 +1,9 @@
+canvas{
+	float:right;
+	padding-right:50px;
+}
+body {
+    background: linear-gradient(141deg, AliceBlue 0%, #b3d9ff 51%, #ccccff 75%);
+    color:white;
+}
+
