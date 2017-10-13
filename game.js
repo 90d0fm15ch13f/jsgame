@@ -91,7 +91,7 @@ Paddle.prototype.move = function (x, y) {
 				};
 
 				function Player() {
-						this.paddle = new Paddle(175, 580, 30, 30);
+						this.paddle = new Paddle(175, 560, 30, 30);
 				}
 
 				Player.prototype.render = function () {
