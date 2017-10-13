@@ -3,7 +3,35 @@ canvas{
 	padding-right:50px;
 }
 body {
-    background: linear-gradient(141deg, AliceBlue 0%, #b3d9ff 51%, #ccccff 75%);
-    color:white;
+    background: linear-gradient(141deg, AliceBlue 0%, #b3d9ff 51%, #80aaff 75%);
+}
+
+
+@keyframes left{
+	0%{
+		transform:translate(3%);
+	}
+	10%{
+		transform:translate(100%);
+	}
+	40%{
+		transform:translate(3%);
+	}
+	50%{
+		transform:translate(100%);
+	}
+	100%{
+		transform:translate(3%);
+	}
+}
+
+h1 {
+		float:left;
+		width:40%;
+		animation:left 5s;
+		transform:translateX(3%);
+		font-family:"Impact", Charcoal, sans-serif;
+		font-size:50;
+		color:#e60000;
 }
 
