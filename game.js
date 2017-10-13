@@ -1,6 +1,8 @@
 var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
         window.setTimeout(callback, 1000 / 60)
     };
+var backgroundImage = new Image();
+backgroundImage.src = './air_hockey_background.png';
 var canvas = document.createElement("canvas");
 var width = 400;
 var height = 600;
@@ -16,6 +18,7 @@ var keysDown = {};
 var render = function () {
     context.fillStyle = "#FFFFFF";
     context.fillRect(0, 0, width, height);
+    context.drawImage(backgroundImage, 0, 0);
     player.render();
     computer.render();
     ball.render();
