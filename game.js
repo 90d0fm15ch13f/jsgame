@@ -2,7 +2,7 @@ var animate = window.requestAnimationFrame || window.webkitRequestAnimationFrame
         window.setTimeout(callback, 1000 / 60)
     };
 var backgroundImage = new Image();
-backgroundImage.src = './air_hockey_background.png';
+backgroundImage.src = 'images/air_hockey_background.png';
 var canvas = document.createElement("canvas");
 var width = 400;
 var height = 600;
