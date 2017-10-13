@@ -115,6 +115,9 @@ Paddle.prototype.move = function (x, y) {
 								} else {
 										this.paddle.move(0, 0);
 								}
+              if (this.paddle.y < 300) {
+                this.paddle.y = 300;
+              }
 						}
 				};
 
