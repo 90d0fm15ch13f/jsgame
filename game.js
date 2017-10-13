@@ -12,6 +12,8 @@ var context = canvas.getContext('2d');
 var player = new Player();
 var computer = new Computer();
 var ball = new Ball(200, 300);
+var player_score = 0;
+var computer_score = 0;
 
 var keysDown = {};
 
@@ -151,7 +153,17 @@ Paddle.prototype.move = function (x, y) {
 								this.x_speed = -this.x_speed;
 						}
 
-						if (this.y < 0 || this.y > 600 && this.x < 225 && this.x > 175) {
+						if (this.y < 0 &&  this.x < 290 && this.x > 110) {
+								player_score += 1;
+								document.getElementById("s_player").innerHTML = player_score;
+								this.x_speed = 0;
+								this.y_speed = 3;
+								this.x = 200;
+								this.y = 300;
+						}
+					  if (this.y > 600 && this.x < 290 && this.x > 110){
+								computer_score += 1;
+								document.getElementById("s_comp").innerHTML = computer_score;
 								this.x_speed = 0;
 								this.y_speed = 3;
 								this.x = 200;
@@ -176,9 +188,40 @@ Paddle.prototype.move = function (x, y) {
     }
 };
 
+function end_game(){
+	if ( player_score > computer_score){
+		alert("You won! Click OK to play again");
+	}
+	if( computer_score > player_score){
+		alert("You lost loser! Click OK to play again");
+	}
+	else{
+		alert("You tied! Click OK to play again");
+	}
+};
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            end_game();
+						location.reload();
+						highscore(player_score);
+        }
+    }, 1000);
+};
+
 window.onload = function() {
   document.body.appendChild(canvas);
   animate(step);
+	var time_3 = 60 * 3, 
+		display = document.querySelector('#timer');
+  startTimer(time_3, display);
 	update_scores();
 };
 

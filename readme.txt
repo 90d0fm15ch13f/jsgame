@@ -1,10 +1,3 @@
-TODO:
-1) Literally all of the css
-2) Add 2nd human player
-  - including the option to choose between human and cpu 2nd player
-3) Make improvments as needed
-4) Add time/score display and limit
-
 CSS3 things:
 -Super cool game name animation when the page loads
 -Gradient background
@@ -17,4 +10,4 @@ Nifty features that were hard to implement:
 
 
 Why our project is worth 100pts:
-	Our project is worth 100pts due to a rather complex javascript file as well as asethically pleasing CSS styling. 
+	Our project is worth 100pts due to a rather complex javascript file as well as asethically pleasing CSS styling. Implementing a computer player that was skilled enough to make the game interesting was also a challange. This group project has taken us at least as much time and effort as previous assignments in the course, and we learned from eachothers strengths. We believe that this project is a good representation of our front end development skills. 

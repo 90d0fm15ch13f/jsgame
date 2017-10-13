@@ -55,10 +55,6 @@ h1 {
   border: 1px solid black;
   border-radius:15px;
 }
-.score {
-	font-family:"Courier New", Courier, monospace;
-	font-size:70;
-}
 
 #timer{
 	font-size:100;
